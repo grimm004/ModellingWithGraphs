@@ -9,7 +9,18 @@ import graph10
 
 def dfs(G,a,b,u):
     n = len(G.nodes())
-    
+    G.node[u]['visited'] = 'yes'
+    print(u)
+    if u == a:
+        G.node[a]['label'] = 0
+    if u == b:
+        return True
+    for v in G[u]:
+        if G.node[v]['visited'] == 'no':
+            G.node[v]['label'] = G.node[u]['label'] + 1
+            if dfs(G, a, b, v):
+                return True
+    return False
 
 
 print()

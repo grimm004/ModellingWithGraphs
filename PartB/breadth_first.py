@@ -12,10 +12,11 @@ def bfs(G,a,b):
     i = 0
     while G.node[b]['label'] == -1:
         for u in G.nodes():
-             if G.node[u]['label'] == i:
-                for v in G[u]:
-                    G.node[v]['label'] = i + 1
+            if G.node[u]['label'] != i: continue
+            for v in [v for v in G[u] if G.node[v]['label'] == -1]:
+                G.node[v]['label'] = i + 1
         i += 1
+
     return G.node[b]['label']
 
 
