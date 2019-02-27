@@ -7,41 +7,26 @@ import graph5
 
 
 def find_next_vertex(G):
-
-
-
-
-
-
-
-
+    
 
 
 def find_smallest_color(G,i):
     n = len(G.nodes())
-
-
-
-
-
-
-
+    neighbour_colours = [G.node[neighbour]['colour'] for neighbour in sorted(G[i]) if G.node[neighbour]['colour'] != 0]
+    node_colour = 1
+    while node_colour in neighbour_colours:
+        node_colour += 1
+    return node_colour
 
 
 def greedy(G):
     n = len(G.nodes())
     global kmax
     global visited_counter
+    kmax = 0
+    visited_counter = 0
 
-
-
-
-
-
-
-
-
-
+    
 
     print()
     for i in G.nodes():
