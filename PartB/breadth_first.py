@@ -8,15 +8,15 @@ import graph10
 def bfs(G,a,b):
     G.add_nodes_from(G.nodes(), label = -1) # initialization of all labels
     G.node[a]['label'] = 0
-
-
-
-
-
-
-
-
-
+    
+    i = 0
+    while G.node[b]['label'] == -1:
+        for u in G.nodes():
+             if G.node[u]['label'] == i:
+                for v in G[u]:
+                    G.node[v]['label'] = i + 1
+        i += 1
+    return G.node[b]['label']
 
 
 G6=graph6.Graph()
