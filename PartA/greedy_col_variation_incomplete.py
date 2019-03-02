@@ -7,7 +7,7 @@ import graph5
 
 
 def find_next_vertex(G):
-    
+    pass
 
 
 def find_smallest_color(G,i):
