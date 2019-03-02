@@ -7,10 +7,8 @@ import graph5
 
 
 def find_smallest_color(G,i):
-    n = len(G.nodes())
-    neighbour_colours = [G.node[neighbour]['colour'] for neighbour in sorted(G[i]) if G.node[neighbour]['colour'] != 0]
     node_colour = 1
-    while node_colour in neighbour_colours:
+    while node_colour in [G.node[neighbour]['colour'] for neighbour in sorted(G[i]) if G.node[neighbour]['colour'] != 0]:
         node_colour += 1
     return node_colour
 
