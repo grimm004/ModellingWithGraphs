@@ -8,22 +8,19 @@ import graph5
 
 def find_smallest_color(G,i):
     node_colour = 1
-    while node_colour in [G.node[neighbour]['colour'] for neighbour in sorted(G[i]) if G.node[neighbour]['colour'] != 0]:
+    node_colours = [G.node[neighbour]['color'] for neighbour in sorted(G[i]) if G.node[neighbour]['color'] != 0]
+    while node_colour in node_colours:
         node_colour += 1
     return node_colour
 
 
 def greedy(G):
     global kmax
-    kmax = 0
-
+    
     for i in G.nodes():
-        G.node[i]['colour'] = 0
-
-    for i in G.nodes():
-        smallest_color = find_smallest_color(G, i)
-        G.node[i]['color'] = G.node[i]['colour'] = smallest_color
-        if smallest_color > kmax: kmax = smallest_color
+        G.node[i]['color'] = find_smallest_color(G, i)
+    
+    kmax = max(G.node[v]['color'] for v in G.nodes())
 
     print()
     for i in G.nodes():
