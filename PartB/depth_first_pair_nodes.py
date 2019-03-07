@@ -14,7 +14,7 @@ def dfs(G,a,b,u):
         G.node[a]['label'] = 0
     if u == b:
         return True
-    for v in G[u]:
+    for v in sorted(G[u]):
         if G.node[v]['visited'] == 'no':
             G.node[v]['label'] = G.node[u]['label'] + 1
             if dfs(G, a, b, v):

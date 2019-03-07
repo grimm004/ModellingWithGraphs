@@ -45,8 +45,8 @@ Depth-First Search found a path in G6 between vertices 12 and 40 of length 2
 Depth-First-Search visited the following nodes of G7 in this order:
 5
 3
-2
 1
+2
 4
 6
 7
@@ -79,7 +79,7 @@ Depth-First-Search visited the following nodes of G7 in this order:
 34
 35
 36
-Depth-First Search found a path in G7 between vertices 5 and 36 of length 34
+Depth-First Search found a path in G7 between vertices 5 and 36 of length 35
 
 Depth-First-Search visited the following nodes of G8 in this order:
 15
@@ -129,17 +129,21 @@ Depth-First-Search visited the following nodes of G9 in this order:
 2
 3
 4
+5
+10
+7
 9
 6
 8
-10
-5
 11
 12
 13
 14
+15
+20
+17
 19
-Depth-First Search found a path in G9 between vertices 1 and 19 of length 13
+Depth-First Search found a path in G9 between vertices 1 and 19 of length 17
 
 Depth-First-Search visited the following nodes of G10 in this order:
 6
